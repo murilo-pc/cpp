@@ -5,6 +5,7 @@ int main(){
     std::mt19937 gerador(seed());
     std::uniform_int_distribution<int> random(1, 100);
     int n = random(gerador), nt = 0, t;
+    std::cout << "seed: " << seed() <<std::endl;
     std::cout << "Você adivinhará um número aleatório de 1 a 100." << std::endl;
     do{
         std::cout << "Digite sua tentativa:  ";

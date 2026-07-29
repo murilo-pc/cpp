@@ -1,5 +1,13 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
+struct atributo{
+    std::string atributo;
+    int valor;
+};
+
+std::vector<atributo> atributos;
 
 int main(){
     int nivel;
@@ -7,11 +15,13 @@ int main(){
     std::string nome;
     std::cout << "====Criador de Personagens====" << std::endl;
     std::cout << "Digite o nome do personagem:  ";
-    std::cin >> nome;
+    std::getline(std::cin, nome);
     std::cout << "Digite o nível do personagem:  ";
     std::cin >> nivel;
+    std::cin.ignore();
     std::cout << "Digite a quantidade de moedas do personagem:  ";
     std::cin >> moedas;
+    std::cin.ignore();
     std::cout <<"O personagem " << nome << " está no nível " << nivel << " e possuí " << moedas << " moedas." << std::endl; 
     return 0;
 }
